@@ -1,0 +1,81 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Environment/FreePlatformerNA/Background/BGFront.png" type="Texture" id=1]
+[ext_resource path="res://Environment/FreePlatformerNA/Background/CloudsBack.png" type="Texture" id=2]
+[ext_resource path="res://Environment/FreePlatformerNA/Background/BGBack.png" type="Texture" id=3]
+[ext_resource path="res://Environment/FreePlatformerNA/Background/CloudsFront.png" type="Texture" id=4]
+
+[node name="Background" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="CloudsBack" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.1, 1 )
+motion_mirroring = Vector2( 1024, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/CloudsBack"]
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 1024, 320 )
+
+[node name="CloudsFront" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.2, 1 )
+motion_mirroring = Vector2( 1024, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/CloudsFront"]
+texture = ExtResource( 4 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 1024, 320 )
+
+[node name="MountainsBack" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.4, 1 )
+motion_mirroring = Vector2( 1024, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/MountainsBack"]
+texture = ExtResource( 3 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 1024, 320 )
+
+[node name="MountainsFront" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.5, 1 )
+motion_mirroring = Vector2( 1024, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/MountainsFront"]
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 1024, 320 )
+
+[node name="BottomFill" type="Sprite" parent="."]
+position = Vector2( 0, 320 )
+scale = Vector2( 512, 4.8 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 310, 10, 10 )
+
+[node name="TopFill" type="Sprite" parent="."]
+scale = Vector2( 5120, -200 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 1, 1 )
+
+[node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
+layer = 0
+
+[node name="CloudsTop" type="ParallaxLayer" parent="ParallaxBackground2"]
+position = Vector2( 0, -380 )
+scale = Vector2( 1, -1 )
+motion_scale = Vector2( 0.2, 1 )
+motion_mirroring = Vector2( 1024, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground2/CloudsTop"]
+position = Vector2( 0, -408 )
+texture = ExtResource( 4 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 1024, 320 )
