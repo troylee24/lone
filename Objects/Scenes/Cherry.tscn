@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://Environment/Sunny-land-files/spritesheets/cherry.png" type="Texture" id=1]
-[ext_resource path="res://Cherry.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Environment/Sunny-land-files/spritesheets/cherry.png" type="Texture" id=1]
+[ext_resource path="res://Objects/Scripts/Cherry.gd" type="Script" id=2]
 [ext_resource path="res://Fonts/pixelmix_bold.ttf" type="DynamicFontData" id=3]
 
 [sub_resource type="Curve" id=1]
@@ -129,20 +129,6 @@ tracks/7/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
-}
-tracks/8/type = "method"
-tracks/8/path = NodePath(".")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "add_cherry"
-} ]
 }
 
 [sub_resource type="Animation" id=6]

@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 #load
-onready var arrow = load("res://Arrow.tscn")
+onready var arrow = load("res://Player/Scenes/Arrow.tscn")
 
 #initialization
 onready var sprite = $Sprite
@@ -100,6 +100,7 @@ func rayCast_colliding(type):
 	return rayCast.is_colliding()
 
 func _ready():
+	Master.connect("slime_squash",self,"jump")
 	animationTree.active = true
 	set_collision("Move")
 
@@ -165,7 +166,7 @@ func spawn():
 func spawn_finished():
 	state = MOVE
 
-func move(delta):	
+func move(delta):
 	velocity.x = lerp(velocity.x,move_speed * move_dir.x,0.35)
 		
 	var anim = "idle"
@@ -342,7 +343,7 @@ func take_damage():
 		else:
 			state = CROUCH
 
+#called at start of "take_damage" animation
 func update_health():
 	health -= 20
-	var HUD = get_tree().get_root().get_node("World/CanvasLayer/HUD")
-	HUD.update_health(health)
+	Master.emit_signal("update_health",health)

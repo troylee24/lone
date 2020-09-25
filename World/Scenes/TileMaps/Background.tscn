@@ -1,9 +1,10 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Environment/FreePlatformerNA/Background/BGFront.png" type="Texture" id=1]
-[ext_resource path="res://Environment/FreePlatformerNA/Background/CloudsBack.png" type="Texture" id=2]
-[ext_resource path="res://Environment/FreePlatformerNA/Background/BGBack.png" type="Texture" id=3]
-[ext_resource path="res://Environment/FreePlatformerNA/Background/CloudsFront.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Environment/FreePlatformerNA/Background/BGFront.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Environment/FreePlatformerNA/Background/CloudsBack.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Environment/FreePlatformerNA/Background/BGBack.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Environment/FreePlatformerNA/Background/CloudsFront.png" type="Texture" id=4]
+
 
 [node name="Background" type="Node2D"]
 

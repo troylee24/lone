@@ -5,6 +5,7 @@ onready var checkpoints = $Checkpoints
 onready var player = $Player
 
 func _ready():
+	randomize()
 	player.position = checkpoints.get_node(Master.checkpoint).position
 
 func _process(_delta):

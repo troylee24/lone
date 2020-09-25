@@ -1,6 +1,7 @@
 [gd_scene load_steps=18 format=2]
 
-[ext_resource path="res://Environment/FreePlatformerNA/Foreground/Tileset.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Environment/FreePlatformerNA/Foreground/Tileset.png" type="Texture" id=1]
+
 
 [sub_resource type="ConvexPolygonShape2D" id=20]
 points = PoolVector2Array( 8.22544, 2.52415, 16, 0, 16, 16, 0, 16 )

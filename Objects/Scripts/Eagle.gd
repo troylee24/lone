@@ -8,10 +8,10 @@ var move_speed = 50
 var velocity = Vector2.ZERO
 
 func _ready():
+	animPlayer.play("move")
 	timer.start()
 
 func _physics_process(_delta):
-	animPlayer.play("move")
 	velocity = Vector2(move_speed * sprite.scale.x,0)
 	velocity = move_and_slide(velocity)
 	

@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Enemies/eagle-attack.png" type="Texture" id=1]
-[ext_resource path="res://Eagle.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Enemies/eagle-attack.png" type="Texture" id=1]
+[ext_resource path="res://Objects/Scripts/Eagle.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16, 10 )
@@ -36,7 +36,6 @@ script = ExtResource( 2 )
 texture = ExtResource( 1 )
 flip_h = true
 hframes = 4
-frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 6 )

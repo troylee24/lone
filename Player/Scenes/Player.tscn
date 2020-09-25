@@ -1,7 +1,7 @@
 [gd_scene load_steps=115 format=2]
 
-[ext_resource path="res://Player.gd" type="Script" id=1]
-[ext_resource path="res://Player/spritesheet.png" type="Texture" id=2]
+[ext_resource path="res://Player/Scripts/Player.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Player/spritesheet.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 5.98899, 16.6667 )
@@ -548,48 +548,46 @@ animation = "slide"
 [sub_resource type="AnimationNodeAnimation" id=50]
 animation = "somersault"
 
-[sub_resource type="AnimationNodeAnimation" id=111]
+[sub_resource type="AnimationNodeAnimation" id=51]
 animation = "spawn"
 
-[sub_resource type="AnimationNodeAnimation" id=51]
+[sub_resource type="AnimationNodeAnimation" id=52]
 animation = "take_damage"
 
-[sub_resource type="AnimationNodeAnimation" id=52]
+[sub_resource type="AnimationNodeAnimation" id=53]
 animation = "wall_climb"
 
-[sub_resource type="AnimationNodeTimeScale" id=53]
+[sub_resource type="AnimationNodeTimeScale" id=54]
 
-[sub_resource type="AnimationNodeBlendTree" id=54]
+[sub_resource type="AnimationNodeBlendTree" id=55]
 graph_offset = Vector2( 0, -68 )
-nodes/Animation/node = SubResource( 52 )
+nodes/Animation/node = SubResource( 53 )
 nodes/Animation/position = Vector2( 240, 140 )
-nodes/TimeScale/node = SubResource( 53 )
+nodes/TimeScale/node = SubResource( 54 )
 nodes/TimeScale/position = Vector2( 540, 140 )
 nodes/output/position = Vector2( 840, 160 )
 node_connections = [ "output", 0, "TimeScale", "TimeScale", 0, "Animation" ]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=55]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=56]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=57]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=58]
-switch_mode = 2
-auto_advance = true
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=59]
 switch_mode = 2
 auto_advance = true
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=60]
+switch_mode = 2
+auto_advance = true
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=61]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=62]
-switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=63]
+switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=64]
 
@@ -600,7 +598,6 @@ switch_mode = 2
 [sub_resource type="AnimationNodeStateMachineTransition" id=67]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=68]
-switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=69]
 switch_mode = 2
@@ -615,14 +612,15 @@ switch_mode = 2
 switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=73]
+switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=74]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=75]
-switch_mode = 2
-auto_advance = true
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=76]
+switch_mode = 2
+auto_advance = true
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=77]
 
@@ -653,7 +651,6 @@ auto_advance = true
 [sub_resource type="AnimationNodeStateMachineTransition" id=90]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=91]
-switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=92]
 switch_mode = 2
@@ -665,25 +662,26 @@ switch_mode = 2
 switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=95]
+switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=96]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=97]
-switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=98]
+switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=99]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=100]
-switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=101]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=102]
 switch_mode = 2
 
+[sub_resource type="AnimationNodeStateMachineTransition" id=102]
+
 [sub_resource type="AnimationNodeStateMachineTransition" id=103]
+switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=104]
 
@@ -695,10 +693,12 @@ switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=108]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=112]
+[sub_resource type="AnimationNodeStateMachineTransition" id=109]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=110]
 switch_mode = 2
 
-[sub_resource type="AnimationNodeStateMachine" id=109]
+[sub_resource type="AnimationNodeStateMachine" id=111]
 states/attack1/node = SubResource( 28 )
 states/attack1/position = Vector2( 369.361, -25.5781 )
 states/attack2/node = SubResource( 31 )
@@ -733,17 +733,17 @@ states/slide/node = SubResource( 49 )
 states/slide/position = Vector2( 581.361, 180 )
 states/somersault/node = SubResource( 50 )
 states/somersault/position = Vector2( 1117, 91 )
-states/spawn/node = SubResource( 111 )
+states/spawn/node = SubResource( 51 )
 states/spawn/position = Vector2( 1000.02, -62 )
-states/take_damage/node = SubResource( 51 )
+states/take_damage/node = SubResource( 52 )
 states/take_damage/position = Vector2( 581.361, -18 )
-states/wall_climb/node = SubResource( 54 )
+states/wall_climb/node = SubResource( 55 )
 states/wall_climb/position = Vector2( 1372, 180 )
-transitions = [ "idle", "run", SubResource( 55 ), "run", "idle", SubResource( 56 ), "jump", "idle", SubResource( 57 ), "jump", "somersault", SubResource( 58 ), "somersault", "fall", SubResource( 59 ), "idle", "jump", SubResource( 60 ), "run", "slide", SubResource( 61 ), "slide", "idle", SubResource( 62 ), "jump", "wall_climb", SubResource( 63 ), "wall_climb", "jump", SubResource( 64 ), "wall_climb", "ledge_grab", SubResource( 65 ), "ledge_grab", "wall_climb", SubResource( 66 ), "idle", "attack1", SubResource( 67 ), "attack2", "idle", SubResource( 68 ), "attack3", "idle", SubResource( 69 ), "attack1", "idle", SubResource( 70 ), "attack1", "attack2", SubResource( 71 ), "attack2", "attack3", SubResource( 72 ), "jump", "attack_air", SubResource( 73 ), "attack_air", "attack_air_land", SubResource( 74 ), "attack_air_land", "idle", SubResource( 75 ), "jump", "ledge_grab", SubResource( 76 ), "fall", "wall_climb", SubResource( 77 ), "wall_climb", "fall", SubResource( 78 ), "somersault", "wall_climb", SubResource( 79 ), "ledge_grab", "fall", SubResource( 80 ), "somersault", "attack_air", SubResource( 81 ), "fall", "attack_air", SubResource( 82 ), "fall", "jump", SubResource( 83 ), "fall", "idle", SubResource( 84 ), "somersault", "idle", SubResource( 85 ), "somersault", "jump", SubResource( 86 ), "idle", "bow_ground", SubResource( 87 ), "fall", "bow_air", SubResource( 88 ), "somersault", "bow_air", SubResource( 89 ), "jump", "bow_air", SubResource( 90 ), "bow_ground", "bow_ground_finished", SubResource( 91 ), "bow_ground_finished", "idle", SubResource( 92 ), "bow_air", "bow_air_finished", SubResource( 93 ), "bow_air_finished", "fall", SubResource( 94 ), "run", "crouch", SubResource( 95 ), "idle", "crouch", SubResource( 96 ), "slide", "crouch", SubResource( 97 ), "crouch", "idle", SubResource( 98 ), "idle", "take_damage", SubResource( 99 ), "take_damage", "idle", SubResource( 100 ), "crouch", "take_damage", SubResource( 101 ), "take_damage", "crouch", SubResource( 102 ), "slide", "take_damage", SubResource( 103 ), "attack1", "take_damage", SubResource( 104 ), "attack2", "take_damage", SubResource( 105 ), "attack3", "take_damage", SubResource( 106 ), "bow_ground_finished", "take_damage", SubResource( 107 ), "bow_ground", "take_damage", SubResource( 108 ), "spawn", "idle", SubResource( 112 ) ]
+transitions = [ "idle", "run", SubResource( 56 ), "run", "idle", SubResource( 57 ), "jump", "idle", SubResource( 58 ), "jump", "somersault", SubResource( 59 ), "somersault", "fall", SubResource( 60 ), "idle", "jump", SubResource( 61 ), "run", "slide", SubResource( 62 ), "slide", "idle", SubResource( 63 ), "jump", "wall_climb", SubResource( 64 ), "wall_climb", "jump", SubResource( 65 ), "wall_climb", "ledge_grab", SubResource( 66 ), "ledge_grab", "wall_climb", SubResource( 67 ), "idle", "attack1", SubResource( 68 ), "attack2", "idle", SubResource( 69 ), "attack3", "idle", SubResource( 70 ), "attack1", "idle", SubResource( 71 ), "attack1", "attack2", SubResource( 72 ), "attack2", "attack3", SubResource( 73 ), "jump", "attack_air", SubResource( 74 ), "attack_air", "attack_air_land", SubResource( 75 ), "attack_air_land", "idle", SubResource( 76 ), "jump", "ledge_grab", SubResource( 77 ), "fall", "wall_climb", SubResource( 78 ), "wall_climb", "fall", SubResource( 79 ), "somersault", "wall_climb", SubResource( 80 ), "ledge_grab", "fall", SubResource( 81 ), "somersault", "attack_air", SubResource( 82 ), "fall", "attack_air", SubResource( 83 ), "fall", "jump", SubResource( 84 ), "fall", "idle", SubResource( 85 ), "somersault", "idle", SubResource( 86 ), "somersault", "jump", SubResource( 87 ), "idle", "bow_ground", SubResource( 88 ), "fall", "bow_air", SubResource( 89 ), "somersault", "bow_air", SubResource( 90 ), "jump", "bow_air", SubResource( 91 ), "bow_ground", "bow_ground_finished", SubResource( 92 ), "bow_ground_finished", "idle", SubResource( 93 ), "bow_air", "bow_air_finished", SubResource( 94 ), "bow_air_finished", "fall", SubResource( 95 ), "run", "crouch", SubResource( 96 ), "idle", "crouch", SubResource( 97 ), "slide", "crouch", SubResource( 98 ), "crouch", "idle", SubResource( 99 ), "idle", "take_damage", SubResource( 100 ), "take_damage", "idle", SubResource( 101 ), "crouch", "take_damage", SubResource( 102 ), "take_damage", "crouch", SubResource( 103 ), "slide", "take_damage", SubResource( 104 ), "attack1", "take_damage", SubResource( 105 ), "attack2", "take_damage", SubResource( 106 ), "attack3", "take_damage", SubResource( 107 ), "bow_ground_finished", "take_damage", SubResource( 108 ), "bow_ground", "take_damage", SubResource( 109 ), "spawn", "idle", SubResource( 110 ) ]
 start_node = "spawn"
 graph_offset = Vector2( 221.015, -179.911 )
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=110]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=112]
 
 [node name="Player" type="KinematicBody2D"]
 collision_layer = 2
@@ -816,9 +816,9 @@ anims/take_damage = SubResource( 24 )
 anims/wall_climb = SubResource( 25 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource( 109 )
+tree_root = SubResource( 111 )
 anim_player = NodePath("../AnimationPlayer")
-parameters/playback = SubResource( 110 )
+parameters/playback = SubResource( 112 )
 parameters/attack1/TimeScale/scale = 1.25
 parameters/attack2/TimeScale/scale = 1.25
 parameters/attack3/TimeScale/scale = 1.25

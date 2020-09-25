@@ -1,12 +1,12 @@
 [gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Fonts/pixelmix.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://HUD/Pixel1_Healthbar_0002_pixel1_border.png" type="Texture" id=2]
-[ext_resource path="res://Environment/Sunny-land-files/spritesheets/cherry.png" type="Texture" id=3]
-[ext_resource path="res://HUD/Pixel1_Healthbar_0001_pixel1_healthbar.png" type="Texture" id=4]
-[ext_resource path="res://HUD.gd" type="Script" id=5]
-[ext_resource path="res://TextureProgress.gd" type="Script" id=6]
-[ext_resource path="res://HUD/full-heart.png" type="Texture" id=7]
+[ext_resource path="res://Assets/HUD/Pixel1_Healthbar_0002_pixel1_border.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Environment/Sunny-land-files/spritesheets/cherry.png" type="Texture" id=3]
+[ext_resource path="res://Assets/HUD/Pixel1_Healthbar_0001_pixel1_healthbar.png" type="Texture" id=4]
+[ext_resource path="res://Player/Scripts/HUD.gd" type="Script" id=5]
+[ext_resource path="res://Player/Scripts/TextureProgress.gd" type="Script" id=6]
+[ext_resource path="res://Assets/HUD/full-heart.png" type="Texture" id=7]
 
 [sub_resource type="Animation" id=1]
 length = 0.8

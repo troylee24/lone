@@ -29,6 +29,8 @@ func rayCast_colliding(type):
 	return rayCast.is_colliding()
 
 func _ready():
+	if randi()%2 == 0:
+		sprite.scale.x = -1
 	animationTree.active = true
 
 func _process(_delta):
@@ -79,9 +81,9 @@ func attack_finished():
 func squash():
 	animTree.travel("squash")
 
+#called at start of "squash" animation
 func squash_jump():
-	var player = get_tree().get_root().get_node("World/Player")
-	player.jump()
+	Master.emit_signal("slime_squash")
 
 func squash_finished():
 	state = MOVE

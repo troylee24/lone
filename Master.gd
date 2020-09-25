@@ -1,5 +1,9 @@
 extends Node
 
+signal slime_squash
+signal update_health
+signal add_cherry
+
 var lives = 3
 var checkpoint = "Spawn"
 
@@ -9,13 +13,15 @@ var total_cherries = 0
 func lose_heart():
 	lives -= 1
 	if lives <= 0:
-		lives = 3
-		picked_cherries.resize(0)
-		checkpoint = "Spawn"
-	var err = get_tree().reload_current_scene()
-	return err == OK
+		reset()
+	get_tree().reload_current_scene()
+
+func reset():
+	lives = 3
+	picked_cherries.resize(0)
+	checkpoint = "Spawn"
 
 func add_cherry(id):
-	picked_cherries.append(id)
-	var HUD = get_tree().get_root().get_node("World/CanvasLayer/HUD")
-	HUD.add_cherry(picked_cherries.size())
+	if !picked_cherries.has(id):
+		picked_cherries.append(id)
+	emit_signal("add_cherry")
